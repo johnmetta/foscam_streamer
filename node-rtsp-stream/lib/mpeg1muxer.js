@@ -12,10 +12,7 @@
     var self;
     self = this;
     this.url = options.url;
-    // var args = ["-rtsp_transport", "tcp", "-i", this.url, '-f', 'mpeg1video', '-b:v', '800k', '-r', '30', '-'];
-    var args = ('-rtsp_transport tcp -i ' + this.url + ' -f mpeg1video -b:v 1000k -an -r 24 -').split(' ')
-    console.log(args)
-    this.stream = child_process.spawn("ffmpeg", args, {
+    this.stream = child_process.spawn("ffmpeg", ["-rtsp_transport", "tcp", "-i", this.url, '-f', 'mpeg1video', '-b:v', '800k', '-r', '30', '-'], {
       detached: false
     });
     this.inputStreamStarted = true;
