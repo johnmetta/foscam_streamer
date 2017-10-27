@@ -1,4 +1,4 @@
-const Stream = require('./node-rtsp-stream');
+const Stream = require('./ow-rtsp-stream');
 const streamUrl = process.env.FOSCAM_STREAM_URL;
 
 stream = new Stream({

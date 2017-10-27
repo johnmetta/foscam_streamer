@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-rtsp-stream": "0.0.3"
+    "ws": "3.2.0",
+    "ow-rtsp-stream": "johnmetta/ow-rtsp-stream"
   }
 }
